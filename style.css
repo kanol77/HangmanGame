@@ -1,0 +1,143 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nova Mono';
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, rgb(19, 19, 19), rgb(48, 48, 48));
+    background-size: cover;
+    color: rgb(232, 232, 232);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    user-zoom: fixed;
+    user-select: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+header {
+    font-size: 5vmin;
+    margin-bottom: 2vmin;
+    cursor: pointer;
+}
+
+header:hover {
+    opacity: 0.7;
+    transition: ease-in 0.5s;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    font-size: 2vmin;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(249, 207, 156);
+}
+
+a:hover {
+    color: rgb(255, 179, 85);
+    transition: 0.7s ease-out;
+}
+
+.wrapper {
+    width: 100%;
+    font-size: 5vmin;
+}
+
+.word {
+    border: 0.5vmin rgb(255, 255, 255) solid;
+    float: left;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    gap: 1vw;
+}
+
+.hangman {
+    border: 0.5vmin rgb(255, 0, 0) solid;
+    float: left;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    position: relative;
+}
+
+.keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 1vmin;
+    font-size: 4vmin;
+    gap: 1vmin;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20vmin;
+    margin-right: 20vmin;
+    max-height: 35vh;
+    overflow-y: scroll;
+}
+
+.keyboard>* {
+    display: flex;
+    padding: 1vmin;
+    font-weight: bolder;
+    border: solid white 0.5vmin;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+    font-size: 7vmin;
+    width: 9vmin;
+    height: 9vmin;
+    cursor: pointer;
+}
+
+.keyboard>*:hover {
+    opacity: 0.4;
+    transition: 0.6s;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.word>p {
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-thickness: 0.8vmin;
+    color: transparent;
+}
+
+svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    stroke: white;
+    stroke-width: 0.4vmin;
+    fill: transparent;
+    stroke-linecap: round;
+}
+
+svg>* {
+    display: none;
+}
+
+.shown {
+    display: block;
+}

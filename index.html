@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="shortcut icon" href="icon.PNG" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header onclick="window.location.reload()">Hangman Game</header>
+    <div class="wrapper">
+        <div class="word"></div>
+        <div class="hangman">
+            <svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 300 200">
+                <line x1="30" x2="270" y1="180" y2="180" class="stage1"></line>
+                <line x1="80" x2="80" y1="180" y2="10" class="stage2"></line>
+                <line x1="80" x2="170" y1="10" y2="10" class="stage3"></line>
+                <line x1="80" x2="120" y1="70" y2="11" class="stage3"></line>
+                <line x1="170" x2="170" y1="10" y2="60" class="stage4"></line>
+                <circle cx="170" cy="75" r="13" class="stage5"></circle>
+                <line x1="170" x2="170" y1="88" y2="135" class="stage6"></line>
+                <line x1="170" x2="155" y1="135" y2="160" class="stage7"></line>
+                <line x1="170" x2="185" y1="135" y2="160" class="stage7"></line>
+                <line x1="170" x2="185" y1="110" y2="95" class="stage8"></line>
+                <line x1="170" x2="155" y1="110" y2="95" class="stage9"></line>
+            </svg>
+        </div>
+    </div>
+    <div class="keyboard"></div>
+    <footer>Hangman Game created by kanol77 using <a target="_blank" href="http://random-word-api.herokuapp.com/home">Random Word
+            API</a></footer>
+</body>
+
+</html>
